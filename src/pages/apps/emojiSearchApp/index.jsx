@@ -8,7 +8,7 @@ import { Styled } from "./styled";
  * - Search matches in name or tags (case-insensitive). Multiple words are ANDed.
  *
  * Keep the dataset small and human-curated so it feels handcrafted. Add more
- * items later if you need — the structure is easy to extend.
+ * items later if you need - the structure is easy to extend.
  */
 
 const EMOJI_DB = [

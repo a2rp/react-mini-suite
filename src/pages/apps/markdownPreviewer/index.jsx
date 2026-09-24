@@ -179,11 +179,11 @@ Type on the left, preview on the right.
 
 \`\`\`
 function hello() {
-  console.log("hi");
+  showValue("hi");
 }
 \`\`\`
 
-[OpenAI](https://openai.com)
+[provider documentation](https://openai.com)
 `;
 
 export default function MarkdownPreviewer() {

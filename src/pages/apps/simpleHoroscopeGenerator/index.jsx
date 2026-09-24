@@ -82,7 +82,7 @@ function buildReading(sign, dateStr) {
     const lucky = Math.max(1, Math.floor(rand() * 99));
 
     const lines = [
-        `You might feel ${mood} today—use that energy to do one real thing in ${focus}.`,
+        `You might feel ${mood} today-use that energy to do one real thing in ${focus}.`,
         `Keep expectations light; momentum beats perfection. ${nudge}.`,
         `A quick check-in with yourself mid-day will keep you on track.`,
     ];
@@ -110,7 +110,7 @@ export default function SimpleHoroscopeGenerator() {
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>${signLabel} — ${dateStr}</title>
+    <title>${signLabel} - ${dateStr}</title>
     <style>
       @page { margin: 0; }
       html, body { margin: 0; padding: 0; background: #fff; }
@@ -135,7 +135,7 @@ export default function SimpleHoroscopeGenerator() {
   <body>
     <div class="card">
       <div class="head">
-        <div class="title">${signLabel} — Horoscope</div>
+        <div class="title">${signLabel} - Horoscope</div>
         <div class="date">${dateStr}</div>
       </div>
       <div class="sep"></div>
@@ -212,7 +212,7 @@ export default function SimpleHoroscopeGenerator() {
                 <Styled.Card ref={cardRef}>
                     <div className="row head">
                         <div className="title">
-                            {(SIGNS.find((s) => s.v === sign) || {}).label || sign} — Horoscope
+                            {(SIGNS.find((s) => s.v === sign) || {}).label || sign} - Horoscope
                         </div>
                         <div className="date">{dateStr}</div>
                     </div>

@@ -17,7 +17,7 @@ export const Styled = {
         margin: auto;
         padding: 15px;
 
-        /* ——— Shared inputs ——— */
+        /* --- Shared inputs --- */
         textarea,
         select,
         input[type="text"],

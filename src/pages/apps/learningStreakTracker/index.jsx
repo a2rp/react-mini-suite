@@ -165,7 +165,7 @@ export default function LearningStreakTracker() {
                                 </Styled.Stat>
                                 <Styled.Stat>
                                     <span className="label">Today</span>
-                                    <span className="value">{todayDone ? "✅" : "—"}</span>
+                                    <span className="value">{todayDone ? "✅" : "-"}</span>
                                 </Styled.Stat>
                             </Styled.Stats>
 

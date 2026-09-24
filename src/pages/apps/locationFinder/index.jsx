@@ -141,7 +141,6 @@ const MapPreview = ({ lat, lon, title = "Map preview", zoom = 14 }) => {
     return (
         <Styled.MapWrap>
             {mode === "img" ? (
-                // eslint-disable-next-line jsx-a11y/alt-text
                 <img
                     src={imgSrc}
                     alt={title}
@@ -402,7 +401,7 @@ const LocationFinder = () => {
                             <>
                                 <MapPreview lat={selectedLat} lon={selectedLon} title="Selected location map" />
                                 <div className="title">{titleFromAddress(selected)}</div>
-                                <div className="addr">{shortAddress(selected) || "—"}</div>
+                                <div className="addr">{shortAddress(selected) || "-"}</div>
                                 <Styled.KV>
                                     <div><span>Latitude</span><code>{f6(selectedLat)}</code></div>
                                     <div><span>Longitude</span><code>{f6(selectedLon)}</code></div>
@@ -426,7 +425,7 @@ const LocationFinder = () => {
                             <>
                                 <MapPreview lat={myLoc.lat} lon={myLoc.lon} title="My location map" />
                                 <div className="title">{titleFromAddress(myLoc.place)}</div>
-                                <div className="addr">{shortAddress(myLoc.place) || "—"}</div>
+                                <div className="addr">{shortAddress(myLoc.place) || "-"}</div>
                                 <Styled.KV>
                                     <div><span>Latitude</span><code>{f6(myLoc.lat)}</code></div>
                                     <div><span>Longitude</span><code>{f6(myLoc.lon)}</code></div>

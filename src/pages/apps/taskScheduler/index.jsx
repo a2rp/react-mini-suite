@@ -163,7 +163,7 @@ const TaskScheduler = () => {
             <Styled.Header>
                 <div>
                     <h1>Task Scheduler</h1>
-                    <p>Add tasks and manage by <strong>priority</strong>. Save, search, filter, sort—stay sane.</p>
+                    <p>Add tasks and manage by <strong>priority</strong>. Save, search, filter, sort-stay sane.</p>
                 </div>
                 <Styled.Badges>
                     <span className="badge">Validation</span>

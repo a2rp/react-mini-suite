@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Styled } from "./styled";
 
 /**
- * React Weather App — simple, reliable, printable
+ * React Weather App - simple, reliable, printable
  * - Search by city name (Open-Meteo Geocoding, no API key)
  * - Current & 7-day forecast (Open-Meteo Forecast)
  * - Unit toggle (°C / °F)
@@ -150,7 +150,7 @@ export default function ReactWeatherApp() {
         if (!data) return null;
         const showC = unit === "C";
         const fmtTemp = (c) =>
-            c == null ? "—" : Math.round(showC ? c : cToF(c)) + `°${unit}`;
+            c == null ? "-" : Math.round(showC ? c : cToF(c)) + `°${unit}`;
         const days = (data.daily || []).map((d) => ({
             ...d,
             min: fmtTemp(d.minC),
@@ -163,7 +163,7 @@ export default function ReactWeatherApp() {
         }));
 
         const nowTemp = data.current?.tempC ?? null;
-        const now = nowTemp == null ? "—" : Math.round(showC ? nowTemp : cToF(nowTemp)) + `°${unit}`;
+        const now = nowTemp == null ? "-" : Math.round(showC ? nowTemp : cToF(nowTemp)) + `°${unit}`;
         return { now, days };
     }, [data, unit]);
 
@@ -177,7 +177,7 @@ export default function ReactWeatherApp() {
       <div class="row">
         <div class="d">${d.day}</div>
         <div class="t"><span class="max">${d.max}</span> / <span class="min">${d.min}</span></div>
-        <div class="p">${d.pop != null ? d.pop + "%" : "—"}</div>
+        <div class="p">${d.pop != null ? d.pop + "%" : "-"}</div>
       </div>`
             )
             .join("");
@@ -369,7 +369,7 @@ export default function ReactWeatherApp() {
                                             <span className="sep">/</span>{" "}
                                             <span className="min">{d.min}</span>
                                         </div>
-                                        <div className="p">{d.pop != null ? `${d.pop}%` : "—"}</div>
+                                        <div className="p">{d.pop != null ? `${d.pop}%` : "-"}</div>
                                     </div>
                                 ))}
                             </div>

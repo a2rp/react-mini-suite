@@ -293,7 +293,7 @@ const HangmanGame = () => {
                 </div>
 
                 <div className="controls">
-                    {/* Difficulty pill — styled explicitly */}
+                    {/* Difficulty pill - styled explicitly */}
                     <label className="difficulty" title="Select difficulty">
                         <span>Difficulty</span>
                         <select

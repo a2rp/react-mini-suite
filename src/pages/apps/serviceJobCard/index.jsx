@@ -306,7 +306,7 @@ export default function ServiceJobCard() {
                                             </span>
                                         </div>
                                         <div className="muted">
-                                            {j.customerName} • {j.phone || "—"}
+                                            {j.customerName} • {j.phone || "-"}
                                         </div>
                                         <div className="muted">
                                             {j.itemType || "Item"}{" "}
@@ -866,7 +866,7 @@ function JobDetail({
                     </div>
                     <div>
                         <strong>Customer:</strong> {job.customerName} (
-                        {job.phone || "—"})
+                        {job.phone || "-"})
                     </div>
                     <div>
                         <strong>Item:</strong> {job.itemType}{" "}

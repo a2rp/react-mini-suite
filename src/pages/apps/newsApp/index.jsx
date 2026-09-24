@@ -45,7 +45,7 @@ const LANGS = [
 const demoArticles = [
     {
         title: "Front-end Practice: Building a News App in React",
-        description: "From API wiring to UX polish — pagination, filters, bookmarks, and modals.",
+        description: "From API wiring to UX polish - pagination, filters, bookmarks, and modals.",
         url: "https://example.com/react-news-app",
         image: "https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1200&auto=format&fit=crop",
         source: "Demo Feed",

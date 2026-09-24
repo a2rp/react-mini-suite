@@ -221,7 +221,7 @@ const WordLetterCounter = () => {
                 <div>
                     <h1>Word & Letter Counter</h1>
                     <p>
-                        Want to check the count of your assignments? Paste your text here —
+                        Want to check the count of your assignments? Paste your text here -
                         the app shows total <strong>words</strong> and <strong>letters</strong>,
                         plus extra stats and quick tools.
                     </p>
@@ -288,7 +288,7 @@ const WordLetterCounter = () => {
                             <div><span className="label">Paragraphs</span><span className="value">{stats.paragraphs}</span></div>
                             <div><span className="label">Lines</span><span className="value">{stats.lines}</span></div>
                             <div><span className="label">Unique words</span><span className="value">{stats.uniqueWords}</span></div>
-                            <div className="span2"><span className="label">Reading time</span><span className="value">{stats.words ? `${stats.readTime} min` : "—"}</span></div>
+                            <div className="span2"><span className="label">Reading time</span><span className="value">{stats.words ? `${stats.readTime} min` : "-"}</span></div>
                         </Styled.StatsGrid>
                         <Styled.HiddenLive role="status">
                             {`${stats.words} words, ${stats.letters} letters, ${stats.characters} chars`}

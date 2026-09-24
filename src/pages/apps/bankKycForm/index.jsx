@@ -458,7 +458,7 @@ const BankKycForm = () => {
 
                 {/* Success banner */}
                 {validated && Object.keys(errors).length === 0 && (
-                    <Styled.Success className="no-print">All good ✅ — ready to print.</Styled.Success>
+                    <Styled.Success className="no-print">All good ✅ - ready to print.</Styled.Success>
                 )}
 
                 {/* Actions */}

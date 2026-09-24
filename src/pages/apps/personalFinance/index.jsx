@@ -312,11 +312,11 @@ export default function PersonalFinance() {
 <html>
 <head>
   <meta charset="utf-8"/>
-  <title>Finance — ${settings.month}</title>
+  <title>Finance - ${settings.month}</title>
   <style>${css}</style>
 </head>
 <body>
-  <h2>Personal Finance — ${settings.month}</h2>
+  <h2>Personal Finance - ${settings.month}</h2>
 
   <div class="grid">
     <div class="card"><div class="muted">Income</div><div><strong>${fmt(cur, stats.income)}</strong></div></div>
@@ -357,7 +357,7 @@ export default function PersonalFinance() {
     }
 
     function fmtTableDate(val) {
-        if (!val) return "—";
+        if (!val) return "-";
 
         // If value already has time ("YYYY-MM-DDTHH:MM" or "...:SS")
         if (/\dT\d/.test(val)) {
@@ -670,7 +670,7 @@ export default function PersonalFinance() {
                                 </td>
                                 <td>{accountsMap.get(t.accountId)?.name || t.accountId}</td>
                                 <td>{categoriesMap.get(t.categoryId)?.name || t.categoryId}</td>
-                                <td className="muted">{t.note || "—"}</td>
+                                <td className="muted">{t.note || "-"}</td>
                                 <td className="num">
                                     {t.type === "expense" ? "-" : "+"}
                                     {fmt(settings.currency, t.amount)}

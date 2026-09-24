@@ -38,7 +38,7 @@ const yyyymmdd = (d = new Date()) =>
     ).padStart(2, "0")}`;
 
 const prettyDateTime = (s) => {
-    if (!s) return "—";
+    if (!s) return "-";
     const d = new Date(s);
     if (isNaN(d)) return s;
     return d.toLocaleString([], { year: "numeric", month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit" });
@@ -196,9 +196,9 @@ export default function AssignmentPlanner() {
     function handlePrint() {
         // Format: "Sep 27, 2025, 11:57 AM"
         const fmtPrintDateTime = (val) => {
-            if (!val) return "—";
+            if (!val) return "-";
             const d = new Date(val);
-            if (isNaN(d)) return "—";
+            if (isNaN(d)) return "-";
             return d.toLocaleString("en-US", {
                 month: "short",
                 day: "2-digit",
@@ -354,7 +354,7 @@ export default function AssignmentPlanner() {
                                             {i.notes && <div className="muted small">{i.notes}</div>}
                                         </Styled.TitleCell>
                                     </td>
-                                    <td>{i.course || "—"}</td>
+                                    <td>{i.course || "-"}</td>
                                     <td>
                                         <div>{prettyDateTime(i.dueAt)}</div>
                                         {dleft !== null && (
@@ -372,7 +372,7 @@ export default function AssignmentPlanner() {
                                             {STATUSES.map((s) => <option key={s.key} value={s.key}>{s.label}</option>)}
                                         </Styled.InlineSelect>
                                     </td>
-                                    <td className="num">{i.estHours || "—"}</td>
+                                    <td className="num">{i.estHours || "-"}</td>
                                     <td className="num">
                                         <Styled.IconBtn title="Edit" onClick={() => openEdit(i)}>✎</Styled.IconBtn>
                                         <Styled.IconBtn title="Delete" onClick={() => deleteItem(i.id)}>✕</Styled.IconBtn>

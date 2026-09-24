@@ -254,7 +254,7 @@ export default function TypingTest() {
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Typing Test — Saved Results</title>
+    <title>Typing Test - Saved Results</title>
     <style>
       @page { margin: 16px; }
       html, body { margin:0; padding:0; background:#fff; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }

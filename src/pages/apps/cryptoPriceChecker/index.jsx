@@ -19,7 +19,7 @@ const DEFAULT_COINS = [
 const LS_KEY_FIAT = "cryptoPriceChecker.fiat";
 const LS_KEY_FILTER = "cryptoPriceChecker.filter";
 
-// CoinGecko simple price endpoint — public, CORS-friendly.
+// CoinGecko simple price endpoint - public, CORS-friendly.
 // We request INR+USD together so toggling fiat is instant.
 function buildUrl(coinIdsCsv) {
     const vs = "inr,usd";
@@ -130,17 +130,17 @@ export default function CryptoPriceChecker() {
 
                 {error && (
                     <Styled.Row role="row" className="error">
-                        <span>—</span>
+                        <span>-</span>
                         <span>{error}</span>
-                        <span>—</span>
+                        <span>-</span>
                     </Styled.Row>
                 )}
 
                 {!error && loading && (
                     <Styled.Row role="row" className="muted">
                         <span>Loading…</span>
-                        <span>—</span>
-                        <span>—</span>
+                        <span>-</span>
+                        <span>-</span>
                     </Styled.Row>
                 )}
 
@@ -158,10 +158,10 @@ export default function CryptoPriceChecker() {
                                     <Styled.Ticker>{c.symbol}</Styled.Ticker>
                                 </span>
 
-                                <span className="price">{price != null ? nfmt.format(price) : "—"}</span>
+                                <span className="price">{price != null ? nfmt.format(price) : "-"}</span>
 
                                 <Styled.Change role="cell" $up={up}>
-                                    {change != null ? `${up ? "▲" : "▼"} ${Math.abs(change).toFixed(2)}%` : "—"}
+                                    {change != null ? `${up ? "▲" : "▼"} ${Math.abs(change).toFixed(2)}%` : "-"}
                                 </Styled.Change>
                             </Styled.Row>
                         );
@@ -172,7 +172,7 @@ export default function CryptoPriceChecker() {
                 <span>Fiat: <b>{fiat.toUpperCase()}</b></span>
                 <span>Coins: <b>{filteredCoins.length}</b></span>
                 <span>
-                    Updated: <b>{lastUpdated ? lastUpdated.toLocaleTimeString() : "—"}</b>
+                    Updated: <b>{lastUpdated ? lastUpdated.toLocaleTimeString() : "-"}</b>
                 </span>
             </Styled.StatusBar>
         </Styled.Wrapper>

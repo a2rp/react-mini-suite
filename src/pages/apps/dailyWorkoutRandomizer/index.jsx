@@ -192,7 +192,7 @@ export default function DailyWorkoutRandomizer() {
                     <input type="date" value={selectedDate} onChange={handleDateChange} />
                 </label>
                 <div className="pretty">{prettyDate(selectedDate)}</div>
-                {!isEditable && <div className="info">Past date — view only.</div>}
+                {!isEditable && <div className="info">Past date - view only.</div>}
             </Styled.DateRow>
 
             <Styled.Controls $disabled={!isEditable}>

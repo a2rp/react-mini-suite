@@ -157,7 +157,7 @@ p{margin:0 0 12px;color:#555}
         try {
             const blob = new Blob([html], { type: "text/html" });
             const url = URL.createObjectURL(blob);
-            const w = window.open(url, "_blank", "width=480,height=700"); // keep it simple—no noreferrer
+            const w = window.open(url, "_blank", "width=480,height=700"); // keep it simple-no noreferrer
             if (!w) {
                 setStatus("error");
                 setMessage("Popup blocked. Allow popups to print this card.");
@@ -183,7 +183,7 @@ p{margin:0 0 12px;color:#555}
                 <Styled.Header>
                     <div>
                         <h2>OTP</h2>
-                        <p className="muted">Local demo — generates a 6-digit code in-browser.</p>
+                        <p className="muted">Local demo - generates a 6-digit code in-browser.</p>
                     </div>
 
                     <Styled.Tools>

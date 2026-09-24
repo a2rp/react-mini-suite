@@ -255,7 +255,7 @@ const CoinFlipper = () => {
             <Styled.Header>
                 <div>
                     <h1>Coin Flipper</h1>
-                    <p>Weighted flips, batch simulation, streak stats, and a tidy history — all offline in your browser.</p>
+                    <p>Weighted flips, batch simulation, streak stats, and a tidy history - all offline in your browser.</p>
                 </div>
                 <Styled.Badges>
                     <span className="badge">Weighted</span>

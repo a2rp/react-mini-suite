@@ -281,12 +281,12 @@ export default function SmartTimetable() {
             const tds = days.map((d) => {
                 const k = keyFor(d.key, pi);
                 const sl = slots[k];
-                if (!sl?.subjectId) return `<td>—</td>`;
+                if (!sl?.subjectId) return `<td>-</td>`;
                 const sub = subjectById(sl.subjectId);
                 const bg = (sub?.color || "#ddd").replace("#", "");
                 return `<td>
           <span class="cell" style="background:#${bg}22; border:1px solid #${bg}">
-            <span class="sub">${escape(sub?.code || "—")}</span>
+            <span class="sub">${escape(sub?.code || "-")}</span>
             ${sl.room ? `<div class="room">${escape(sl.room)}</div>` : ""}
           </span>
         </td>`;
@@ -545,10 +545,10 @@ export default function SmartTimetable() {
                                         >
                                             {sub ? (
                                                 <Styled.Cell style={{ borderColor: sub.color, background: sub.color + "22" }}>
-                                                    <div className="sub">{sub.code || "—"}</div>
+                                                    <div className="sub">{sub.code || "-"}</div>
                                                     {data?.room ? <div className="room">{data.room}</div> : null}
                                                 </Styled.Cell>
-                                            ) : <Styled.Dash>—</Styled.Dash>}
+                                            ) : <Styled.Dash>-</Styled.Dash>}
                                         </td>
                                     );
                                 })}
@@ -583,7 +583,7 @@ function SlotEditor({ subjects, k, initial, onClose, onSave, onClear }) {
         <Styled.Modal onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
             <Styled.Dialog onMouseDown={(e) => e.stopPropagation()}>
                 <Styled.DialogHead>
-                    <h3>Edit Slot — {k}</h3>
+                    <h3>Edit Slot - {k}</h3>
                     <button onClick={onClose} aria-label="Close">✕</button>
                 </Styled.DialogHead>
 
@@ -596,7 +596,7 @@ function SlotEditor({ subjects, k, initial, onClose, onSave, onClear }) {
                     <label>
                         <span>Subject</span>
                         <select value={subjectId} onChange={(e) => setSubjectId(e.target.value)}>
-                            <option value="">— None —</option>
+                            <option value="">- None -</option>
                             {subjects.map((s) => (
                                 <option key={s.id} value={s.id}>{s.code || s.name || s.id}</option>
                             ))}

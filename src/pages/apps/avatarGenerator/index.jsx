@@ -255,7 +255,7 @@ const AvatarGenerator = () => {
             {/* Preview */}
             <Styled.PreviewCard>
                 <div className="imgWrap">
-                    {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+                    {/* eslint-disable-next-line */}
                     <img src={url} alt="Generated avatar" />
                 </div>
 

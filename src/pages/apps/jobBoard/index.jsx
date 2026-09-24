@@ -381,7 +381,7 @@ const JobBoard = () => {
                                 <div className="spacer" />
                                 {activeKey
                                     ? <span className="muted">{apiKey ? "Using saved key" : ".env key in use"}</span>
-                                    : <span className="muted warn">No API key — showing fallback</span>
+                                    : <span className="muted warn">No API key - showing fallback</span>
                                 }
                                 <button type="button" onClick={verifyKey}>Verify Key</button>
                                 <button type="button" className="ghost danger" onClick={askClearKey} disabled={!apiKey}>Clear Key</button>
@@ -433,7 +433,7 @@ const JobBoard = () => {
                                         <div className="logo">{j.employer_logo ? <img src={j.employer_logo} alt={j.employer_name} /> : <span className="placeholder" />}</div>
                                         <div className="meta">
                                             <h3 title={j.job_title}>{j.job_title}</h3>
-                                            <p className="company">{j.employer_name || j.job_publisher || "—"}</p>
+                                            <p className="company">{j.employer_name || j.job_publisher || "-"}</p>
                                             <p className="loc">
                                                 {j.job_city ? `${j.job_city}, ` : ""}{j.job_country || ""}
                                                 {j.job_is_remote ? " • Remote" : ""}
@@ -478,7 +478,7 @@ const JobBoard = () => {
                                     <li key={j.job_id}>
                                         <div className="meta" onClick={() => setDetail(j)}>
                                             <strong>{j.job_title}</strong>
-                                            <span className="muted">{j.employer_name || "—"}</span>
+                                            <span className="muted">{j.employer_name || "-"}</span>
                                         </div>
                                         <div className="row">
                                             <a href={j.job_apply_link || "#"} target="_blank" rel="noreferrer">Apply</a>
@@ -500,12 +500,12 @@ const JobBoard = () => {
                         ) : (
                             <div>
                                 <h3 className="detail-title">{detail.job_title}</h3>
-                                <p className="muted">{detail.employer_name || detail.job_publisher || "—"} • {detail.job_city ? `${detail.job_city}, ` : ""}{detail.job_country || ""}{detail.job_is_remote ? " • Remote" : ""}</p>
+                                <p className="muted">{detail.employer_name || detail.job_publisher || "-"} • {detail.job_city ? `${detail.job_city}, ` : ""}{detail.job_country || ""}{detail.job_is_remote ? " • Remote" : ""}</p>
                                 <Styled.Tags style={{ marginTop: 6, marginBottom: 10 }}>
                                     {detail.job_employment_type && <span>{detail.job_employment_type}</span>}
                                     <span className="muted">Posted {fmtDate(detail.job_posted_at_timestamp)} ({since(detail.job_posted_at_timestamp)})</span>
                                 </Styled.Tags>
-                                <p className="desc full">{detail.job_description || "—"}</p>
+                                <p className="desc full">{detail.job_description || "-"}</p>
 
                                 {Array.isArray(detail.job_required_skills) && detail.job_required_skills.length > 0 && (
                                     <>
@@ -520,8 +520,8 @@ const JobBoard = () => {
                                         <Styled.Divider />
                                         <Styled.SectionTitle>Compensation</Styled.SectionTitle>
                                         <p className="muted">
-                                            {detail.job_min_salary ? fmtMoney(detail.job_min_salary, detail.job_salary_currency) : "—"} –{" "}
-                                            {detail.job_max_salary ? fmtMoney(detail.job_max_salary, detail.job_salary_currency) : "—"}
+                                            {detail.job_min_salary ? fmtMoney(detail.job_min_salary, detail.job_salary_currency) : "-"} –{" "}
+                                            {detail.job_max_salary ? fmtMoney(detail.job_max_salary, detail.job_salary_currency) : "-"}
                                         </p>
                                     </>
                                 )}

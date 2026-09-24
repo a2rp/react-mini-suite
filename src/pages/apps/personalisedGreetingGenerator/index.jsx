@@ -69,7 +69,7 @@ export default function PersonalisedGreetingGenerator() {
             Birthday: {
                 Friendly: `${namePart}\nWishing you a day full of smiles and a year packed with wins. ${extra}`,
                 Formal: `${namePart}\nWarm birthday wishes. May the year ahead bring health, success, and joy. ${extra}`,
-                Funny: `${namePart}\nAnother lap around the sun — still looking good! Cake first, decisions later. ${extra}`,
+                Funny: `${namePart}\nAnother lap around the sun - still looking good! Cake first, decisions later. ${extra}`,
             },
             Anniversary: {
                 Friendly: `${namePart}\nHere’s to love, laughter, and many more years together. ${extra}`,
@@ -79,12 +79,12 @@ export default function PersonalisedGreetingGenerator() {
             Congratulations: {
                 Friendly: `${namePart}\nHuge congrats! You earned this. Onward and upward. ${extra}`,
                 Formal: `${namePart}\nCongratulations on your achievement. Wishing you continued success. ${extra}`,
-                Funny: `${namePart}\nMission accomplished. Bragging rights unlocked — use responsibly. ${extra}`,
+                Funny: `${namePart}\nMission accomplished. Bragging rights unlocked - use responsibly. ${extra}`,
             },
             "Thank You": {
-                Friendly: `${namePart}\nThank you—your help made a real difference. ${extra}`,
+                Friendly: `${namePart}\nThank you-your help made a real difference. ${extra}`,
                 Formal: `${namePart}\nWith sincere thanks for your support and time. ${extra}`,
-                Funny: `${namePart}\nThanks a ton — I owe you coffee (or two). ${extra}`,
+                Funny: `${namePart}\nThanks a ton - I owe you coffee (or two). ${extra}`,
             },
             "Get Well Soon": {
                 Friendly: `${namePart}\nWishing you steady rest and a smooth recovery. ${extra}`,
@@ -105,7 +105,7 @@ export default function PersonalisedGreetingGenerator() {
 
         const bank = templates[o] || templates["Congratulations"];
         const body = bank?.[t] || bank?.Friendly;
-        const from = s.fromName ? `\n— ${s.fromName}` : "";
+        const from = s.fromName ? `\n- ${s.fromName}` : "";
         return { title: o, body: body.trim(), from };
     }
 

@@ -52,7 +52,7 @@ const FALLBACK_JOKES = [
     { category: "Pun", type: "twopart", setup: "I would tell you a UDP joke", delivery: "…but you might not get it." },
     { category: "Misc", type: "single", joke: "Parallel lines have so much in common. It’s a shame they’ll never meet." },
     { category: "Programming", type: "twopart", setup: "How many programmers does it take to change a light bulb?", delivery: "None. That’s a hardware problem." },
-    { category: "Spooky", type: "single", joke: "Skeletons are so chill—nothing gets under their skin." },
+    { category: "Spooky", type: "single", joke: "Skeletons are so chill-nothing gets under their skin." },
     { category: "Christmas", type: "twopart", setup: "What do you call an elf who sings?", delivery: "A wrapper." },
 ];
 
@@ -68,7 +68,7 @@ function toJokeRecord(src) {
             id, category, type,
             setup: softClean(src.setup || ""),
             delivery: softClean(src.delivery || ""),
-            text: `${softClean(src.setup || "")} — ${softClean(src.delivery || "")}`,
+            text: `${softClean(src.setup || "")} - ${softClean(src.delivery || "")}`,
             blacklistFlags, time,
         };
     }
@@ -251,7 +251,7 @@ const JokesGenerator = () => {
             <Styled.Header>
                 <div>
                     <h1>Jokes Generator</h1>
-                    <p>Clean, safe-mode by default. Save favorites, search history, copy, share, and print—fully client-side.</p>
+                    <p>Clean, safe-mode by default. Save favorites, search history, copy, share, and print-fully client-side.</p>
                 </div>
                 <Styled.Badges>
                     <span className="badge">Safe Mode</span>
@@ -352,7 +352,7 @@ const JokesGenerator = () => {
                                     {j.type === "twopart" ? (
                                         <div className="content">
                                             <div className="setup">{j.setup}</div>
-                                            <div className="delivery">— {j.delivery}</div>
+                                            <div className="delivery">- {j.delivery}</div>
                                         </div>
                                     ) : (
                                         <div className="content single">{j.text}</div>

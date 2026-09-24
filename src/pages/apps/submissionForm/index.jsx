@@ -654,7 +654,7 @@ const SubmissionForm = () => {
                                     onChange={onFileChange} onBlur={onBlur} />
                                 {resumeInfo && (
                                     <Styled.Help>
-                                        {resumeInfo.name} — {(resumeInfo.size / MB).toFixed(2)} MB
+                                        {resumeInfo.name} - {(resumeInfo.size / MB).toFixed(2)} MB
                                     </Styled.Help>
                                 )}
                                 <Styled.Error role="alert">{touched.resume && errors.resume}</Styled.Error>

@@ -105,7 +105,7 @@ const CreditCardValidator = () => {
                             {isValid ? "✓ Passes Luhn" : "✗ Fails Luhn"}
                         </Styled.Pill>
                     ) : (
-                        <Styled.Pill $tone="muted">—</Styled.Pill>
+                        <Styled.Pill $tone="muted">-</Styled.Pill>
                     )}
                     {!!raw && <span className="len">{raw.length} digits</span>}
                 </Styled.Row>

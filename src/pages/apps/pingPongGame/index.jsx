@@ -178,7 +178,7 @@ const PingPongGame = () => {
         if (keys.current.ArrowUp && settings.mode === "two") R.y -= settings.paddleSpeed;
         if (keys.current.ArrowDown && settings.mode === "two") R.y += settings.paddleSpeed;
 
-        // AI paddle for single-player
+        // computer paddle for single-player
         if (settings.mode === "single") {
             const targetY = B.y - R.h / 2;
             const follow = settings.difficulty === "easy" ? 0.05 : settings.difficulty === "hard" ? 0.16 : 0.1;

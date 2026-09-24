@@ -1,13 +1,11 @@
 import ScrollToTop from './components/ScrollToTop'
 import { Styled } from './App.styled'
-import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
+import { Navigate, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import { lazy, Suspense, useState } from 'react'
 import { MdMenuOpen } from 'react-icons/md'
 import { Box, CircularProgress } from '@mui/material'
 import Footer from './components/footer'
 import NavList from './components/navList'
-
-import ar_logo from "./assets/ar_logo.png";
 
 // ✅ Toasts
 import { ToastContainer } from 'react-toastify';
@@ -128,12 +126,13 @@ const NotFound = lazy(() => import('./pages/notFound'));
 const App = () => {
     const [displayNav, setDisplayNav] = useState(true);
     const handleDisplayNav = () => setDisplayNav(prev => !prev);
+    const { pathname } = useLocation();
 
     return (
         <Styled.Wrapper>
             <Styled.Header>
                 <Styled.LogoLinkWrapper>
-                    <Styled.NavLinkWrapper onClick={handleDisplayNav}>
+                    <Styled.NavLinkWrapper as="button" type="button" onClick={handleDisplayNav} aria-label="Toggle navigation" aria-expanded={displayNav}>
                         <MdMenuOpen size={20} />
                     </Styled.NavLinkWrapper>
                     <NavLink to="/" title="React Mini Suite">React Mini Suite</NavLink>
@@ -144,7 +143,7 @@ const App = () => {
                         target="_blank"
                         title="Ashish Ranjan"
                     >
-                        <img src={ar_logo} alt="ar_logo" />
+                        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Ashish Ranjan logo" />
                     </a>
                 </Styled.Heading>
             </Styled.Header>
@@ -159,6 +158,7 @@ const App = () => {
                 <Styled.ContentWrapper id="scroll-root" data-scroll-root>
                     <Styled.RoutesWrapper>
                         <Suspense
+                            key={pathname}
                             fallback={<Box
                                 sx={{
                                     // border: "1px solid #f00",

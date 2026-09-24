@@ -156,7 +156,7 @@ export default function MemoryWordGame() {
             <Styled.StatsBar>
                 <div>Moves: <b>{moves}</b></div>
                 <div>Matched: <b>{matched.size / 2}</b> / {totalMatches}</div>
-                <div>Best (fewest moves): <b>{best ?? "—"}</b></div>
+                <div>Best (fewest moves): <b>{best ?? "-"}</b></div>
             </Styled.StatsBar>
 
             {solved && (

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Styled } from "./styled";
 
 /** ------------------------------------------------------------------------
- * TokenPress — simple queue ticket printer
+ * TokenPress - simple queue ticket printer
  * Now with: Next, Prev, and Print (prints the CURRENT token)
  * ----------------------------------------------------------------------- */
 
@@ -115,7 +115,7 @@ export default function TokenPress() {
     return (
         <Styled.Wrapper>
             <Styled.HeaderBar>
-                <h1>TokenPress — Queue Ticket Printer</h1>
+                <h1>TokenPress - Queue Ticket Printer</h1>
                 <span className="muted">Single-purpose · Offline-first · LocalStorage only</span>
             </Styled.HeaderBar>
 
@@ -155,7 +155,7 @@ export default function TokenPress() {
                 {/* Right: Preview */}
                 <Styled.Panel>
                     <Styled.PreviewCard>
-                        <div className="shop">{settings.shop || "—"}</div>
+                        <div className="shop">{settings.shop || "-"}</div>
                         <div className="label">Current token</div>
                         <div className="token">{currentToken}</div>
                         <div className="time">{nowStr}</div>
@@ -186,7 +186,7 @@ function Field({ label, children }) {
     );
 }
 
-/** Ticket HTML — inline for a clean, print-only page */
+/** Ticket HTML - inline for a clean, print-only page */
 function getTicketHTML({ token, shop, time }) {
     return `
     <div style="

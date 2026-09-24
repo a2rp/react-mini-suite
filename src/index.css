@@ -96,3 +96,6 @@ input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
+
+.goTopButton { position: fixed; right: 22px; bottom: 22px; z-index: 10001; width: 40px; height: 40px; display: grid; place-items: center; color: #dce8f7; border: 1px solid #344962; border-radius: 50%; background: #010409; cursor: pointer; transition: color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.goTopButton:hover { color: #9bd8ff; border-color: #9bd8ff; box-shadow: 0 0 0 3px rgba(155, 216, 255, .12); }

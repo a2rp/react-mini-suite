@@ -4,7 +4,7 @@ import { Styled } from "./styled";
 import { toast } from "react-toastify";
 
 /*
-  RateCard — a tiny, printable service rate sheet.
+  RateCard - a tiny, printable service rate sheet.
 
   Scope:
   - Left: quick edit (business meta + simple rows)
@@ -228,7 +228,7 @@ export default function RateCard() {
                 {/* -------- Right: Preview (prints only this card) -------- */}
                 <Styled.PreviewCard id="rateCardPrint" aria-label="Preview">
                     <header>
-                        <h2>{meta.businessName || "—"}</h2>
+                        <h2>{meta.businessName || "-"}</h2>
                         {meta.subtitle ? <p className="muted">{meta.subtitle}</p> : null}
                     </header>
 
@@ -242,17 +242,17 @@ export default function RateCard() {
                         <div className="tbody">
                             {items.length === 0 ? (
                                 <div className="row">
-                                    <span>—</span>
-                                    <span>—</span>
-                                    <span>—</span>
+                                    <span>-</span>
+                                    <span>-</span>
+                                    <span>-</span>
                                 </div>
                             ) : (
                                 items.map((r) => (
                                     <div className="row" key={r.id}>
-                                        <span className="name">{r.name || "—"}</span>
-                                        <span className="unit">{r.unit || "—"}</span>
+                                        <span className="name">{r.name || "-"}</span>
+                                        <span className="unit">{r.unit || "-"}</span>
                                         <span className="rate">
-                                            {r.rate ? `${symbol} ${r.rate}` : "—"}
+                                            {r.rate ? `${symbol} ${r.rate}` : "-"}
                                         </span>
                                     </div>
                                 ))

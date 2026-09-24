@@ -13,27 +13,27 @@ const FAV_KEY = "countryInfo_favorites_v1";
 
 /* tiny helpers */
 const fmtNumber = (n) => (typeof n === "number" ? n.toLocaleString("en-IN") : n);
-const list = (arr) => (Array.isArray(arr) && arr.length ? arr.join(", ") : "—");
+const list = (arr) => (Array.isArray(arr) && arr.length ? arr.join(", ") : "-");
 
 /* extract currencies as "INR (Indian Rupee)" */
 function currenciesToText(obj) {
-    if (!obj) return "—";
+    if (!obj) return "-";
     try {
         return Object.entries(obj)
             .map(([code, val]) => `${code}${val?.name ? ` (${val.name})` : ""}`)
             .join(", ");
     } catch {
-        return "—";
+        return "-";
     }
 }
 
 /* extract languages as "English, Hindi" */
 function languagesToText(obj) {
-    if (!obj) return "—";
+    if (!obj) return "-";
     try {
         return Object.values(obj).join(", ");
     } catch {
-        return "—";
+        return "-";
     }
 }
 
@@ -41,7 +41,7 @@ function languagesToText(obj) {
 function phoneCode(idd) {
     const r = idd?.root || "";
     const s = Array.isArray(idd?.suffixes) ? idd.suffixes[0] || "" : "";
-    return r || s ? `${r}${s}` : "—";
+    return r || s ? `${r}${s}` : "-";
 }
 
 /* =========================================================
@@ -294,7 +294,7 @@ const CountryInformation = () => {
         const tz = list(c.timezones);
         const langs = languagesToText(c.languages);
         const curr = currenciesToText(c.currencies);
-        const coords = Array.isArray(c.latlng) ? c.latlng.map((x) => x.toFixed(2)).join(", ") : "—";
+        const coords = Array.isArray(c.latlng) ? c.latlng.map((x) => x.toFixed(2)).join(", ") : "-";
         const tld = list(c.tld);
         const area = fmtNumber(c.area);
         const pop = fmtNumber(c.population);
@@ -307,7 +307,7 @@ const CountryInformation = () => {
             <Styled.Header>
                 <div>
                     <h1>Country Information</h1>
-                    <p>Curious about countries? Type a name and get quick, reliable basics—flags, capital, languages, currencies, neighbors, and more.</p>
+                    <p>Curious about countries? Type a name and get quick, reliable basics-flags, capital, languages, currencies, neighbors, and more.</p>
                 </div>
                 <Styled.Badges>
                     <span className="badge">Live API</span>
@@ -367,7 +367,7 @@ const CountryInformation = () => {
                     {!results.length && !loading && <p className="muted">No results yet. Try a search or click a suggestion.</p>}
                     <Styled.List>
                         {results.map((c) => {
-                            const name = c?.name?.common || "—";
+                            const name = c?.name?.common || "-";
                             const sub = [c?.region, c?.subregion].filter(Boolean).join(" • ");
                             const cap = list(c?.capital);
                             const active = selected?.cca3 === c?.cca3;
@@ -378,7 +378,7 @@ const CountryInformation = () => {
                                         <img src={c?.flags?.png || c?.flags?.svg} alt={`${name} flag`} />
                                         <div className="meta">
                                             <div className="name">{name}</div>
-                                            <div className="sub">{sub || "—"}</div>
+                                            <div className="sub">{sub || "-"}</div>
                                             <div className="cap">Capital: {cap}</div>
                                         </div>
                                     </button>
@@ -412,15 +412,15 @@ const CountryInformation = () => {
                                         />
                                         <div>
                                             <h2>{selected?.name?.common}</h2>
-                                            <div className="muted">{selected?.name?.official || "—"}</div>
-                                            <div className="muted">CCA3: {selected?.cca3 || "—"}</div>
+                                            <div className="muted">{selected?.name?.official || "-"}</div>
+                                            <div className="muted">CCA3: {selected?.cca3 || "-"}</div>
                                         </div>
                                     </div>
 
                                     <Styled.Grid two>
                                         <div className="row">
                                             <div className="label">Region</div>
-                                            <div className="value">{[selected?.region, selected?.subregion].filter(Boolean).join(" • ") || "—"}</div>
+                                            <div className="value">{[selected?.region, selected?.subregion].filter(Boolean).join(" • ") || "-"}</div>
                                         </div>
                                         <div className="row">
                                             <div className="label">Capital</div>

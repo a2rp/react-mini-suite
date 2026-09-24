@@ -25,7 +25,7 @@ const blankForm = {
     photoData: "",
 
     skillsCsv:
-        "React (Vite), Styled-Components, Node/Express, MongoDB, HTML/SCSS/JS, GitHub Pages, Netlify/Cloudflare, LLM/AI (experiments)",
+        "React (Vite), Styled-Components, Node/Express, MongoDB, HTML/SCSS/JS, GitHub Pages, Netlify/Cloudflare, modern tooling experiments",
 
     projectsText: [
         "UPI QR Styled | Logo overlay, presets | /upi-qr-styled",
@@ -423,7 +423,7 @@ const PersonalPortfolio = () => {
                                 <ul>
                                     {projects.map((p) => (
                                         <li key={p.title}>
-                                            <strong>{p.title}:</strong> {p.note} {p.link ? (<em>— {p.link}</em>) : null}
+                                            <strong>{p.title}:</strong> {p.note} {p.link ? (<em>- {p.link}</em>) : null}
                                         </li>
                                     ))}
                                 </ul>
@@ -433,7 +433,7 @@ const PersonalPortfolio = () => {
                                 <div>
                                     <h2>Education</h2>
                                     {education.map((e, i) => (
-                                        <p key={i}><strong>{e.degree}</strong>, {e.institute} — {e.year}</p>
+                                        <p key={i}><strong>{e.degree}</strong>, {e.institute} - {e.year}</p>
                                     ))}
                                 </div>
                                 <div>

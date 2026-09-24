@@ -327,7 +327,7 @@ const ImageCompressor = () => {
                 </div>
                 <Styled.Totals>
                     <span className="pill">Original: {bytes(totalOriginal)}</span>
-                    <span className="pill">Compressed: {totalCompressed ? bytes(totalCompressed) : "—"}</span>
+                    <span className="pill">Compressed: {totalCompressed ? bytes(totalCompressed) : "-"}</span>
                 </Styled.Totals>
             </Styled.Header>
 

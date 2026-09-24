@@ -489,7 +489,7 @@ const VirtualKeyboard = () => {
                                     <div className="info">
                                         <strong>{sn.title}</strong>
                                         <span className="date">{formatISTLabel(sn.createdAt)}</span>
-                                        <p className="preview">{sn.content.slice(0, 120) || "—"}</p>
+                                        <p className="preview">{sn.content.slice(0, 120) || "-"}</p>
                                     </div>
                                     <div className="buttons">
                                         <button onClick={() => loadSnippet(sn.id, "replace")} title="Replace current text">Load</button>

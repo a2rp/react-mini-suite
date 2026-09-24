@@ -313,7 +313,7 @@ const DictionaryApp = () => {
                                 <Styled.Definitions>
                                     {combinedMeanings.map((m, i) => (
                                         <div className="pos-block" key={i}>
-                                            <div className="pos">{m.partOfSpeech || "—"}</div>
+                                            <div className="pos">{m.partOfSpeech || "-"}</div>
                                             <ol className="defs">
                                                 {m.definitions.map((d, j) => (
                                                     <li key={j}>

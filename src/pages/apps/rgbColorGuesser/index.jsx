@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Styled } from "./styled";
 
 /* ----------------------------------------------------------------------------
-   RGB Color Guesser — “no numbers by default” learning game
+   RGB Color Guesser - “no numbers by default” learning game
    - Two modes: Tiles (choose swatch) / Mixer (match via sliders)
    - Decoys generated in CIE Lab for perceptual closeness
    - Reveal panel AFTER guess/check shows exact numbers & deltas
@@ -381,7 +381,7 @@ export default function RgbColorGuesser() {
                     <Styled.Reveal ref={printRef}>
                         <div className="card">
                             <div className="top">
-                                <h3 className="title">Result — {reveal.ok ? "Correct" : "Wrong"}</h3>
+                                <h3 className="title">Result - {reveal.ok ? "Correct" : "Wrong"}</h3>
                                 <div className={`pill ${reveal.ok ? "ok" : "bad"}`}>{reveal.ok ? "Correct" : "Wrong"}</div>
                             </div>
 

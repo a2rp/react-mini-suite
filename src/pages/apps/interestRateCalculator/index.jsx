@@ -14,7 +14,7 @@ const compoundingMap = {
 const formatINR = (n) =>
     isFinite(n)
         ? n.toLocaleString("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 2 })
-        : "—";
+        : "-";
 
 export default function InterestRateCalculator() {
     // form
@@ -222,7 +222,7 @@ export default function InterestRateCalculator() {
                         </div>
                         <div>
                             <span>Effective Annual Rate</span>
-                            <strong>{isFinite(effAPR) ? `${(effAPR * 100).toFixed(2)}%` : "—"}</strong>
+                            <strong>{isFinite(effAPR) ? `${(effAPR * 100).toFixed(2)}%` : "-"}</strong>
                         </div>
                     </Styled.Result>
 

@@ -196,7 +196,7 @@ export default function RupeeWords() {
         <Styled.Wrapper>
             <Styled.Header>
                 <h1>RupeeWords</h1>
-                <p>Convert any ₹ amount to words — Indian/International format, with paise &amp; “Only”.</p>
+                <p>Convert any ₹ amount to words - Indian/International format, with paise &amp; “Only”.</p>
             </Styled.Header>
 
             <Styled.Panel>

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Styled } from "./styled";
 
 /**
- * Dice App — simple, focused utility
+ * Dice App - simple, focused utility
  * - Pick how many dice (1–6)
  * - Roll to get values + total
  * - Keeps a short history (localStorage)

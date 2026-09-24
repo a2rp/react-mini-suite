@@ -108,7 +108,7 @@ function MedicineDelivery() {
 
     const summary = useMemo(() => {
         const lines = [];
-        lines.push(`Medicine Delivery Request — ${prettyDate()}`);
+        lines.push(`Medicine Delivery Request - ${prettyDate()}`);
 
         // Patient / delivery
         if (meta.patientName) lines.push(`Patient: ${meta.patientName}`);
@@ -140,7 +140,7 @@ function MedicineDelivery() {
             const qty = Number(x.qty || 0);
             const price = Number(x.price || 0);
             const lineTotal = qty * price;
-            const tail = x.notes?.trim() ? ` — ${x.notes.trim()}` : "";
+            const tail = x.notes?.trim() ? ` - ${x.notes.trim()}` : "";
             lines.push(`${i + 1}. ${name} × ${qty} @ ${rupee(price)} = ${rupee(lineTotal)}${tail}`);
         });
 

@@ -230,7 +230,7 @@ h1{font-size:18px;margin:0 0 10px}
 <div class="grid">
 ${values
                 .map(
-                    ([k, v]) => `<div class="k">${k}</div><div class="v">${v ?? "—"}</div>`
+                    ([k, v]) => `<div class="k">${k}</div><div class="v">${v ?? "-"}</div>`
                 )
                 .join("")}
 </div>
@@ -255,9 +255,9 @@ ${values
             ["Region/State", safe(d.region)],
             ["City", safe(d.city)],
             ["Postal", safe(d.postal)],
-            ["Latitude", d.latitude ?? "—"],
-            ["Longitude", d.longitude ?? "—"],
-            ["Map", map ? map : "—"],
+            ["Latitude", d.latitude ?? "-"],
+            ["Longitude", d.longitude ?? "-"],
+            ["Map", map ? map : "-"],
             ["Timezone", safe(d.timezone)],
             ["UTC Offset", safe(d.utc_offset)],
             ["Device (UA)", safe(d.userAgent)],
@@ -266,7 +266,7 @@ ${values
     }
 
     function safe(v) {
-        if (v === null || v === undefined || v === "") return "—";
+        if (v === null || v === undefined || v === "") return "-";
         return String(v);
     }
 
@@ -300,7 +300,7 @@ ${values
 
                     <span>IPv4</span>
                     <div className="val">
-                        <code>{info.ipv4 || "—"}</code>
+                        <code>{info.ipv4 || "-"}</code>
                         {!!info.ipv4 && (
                             <button onClick={() => copy(info.ipv4, "ipv4")}>
                                 {lastCopied === "ipv4" ? "Copied!" : "Copy"}
@@ -310,7 +310,7 @@ ${values
 
                     <span>IPv6</span>
                     <div className="val">
-                        <code>{info.ipv6 || "—"}</code>
+                        <code>{info.ipv6 || "-"}</code>
                         {!!info.ipv6 && (
                             <button onClick={() => copy(info.ipv6, "ipv6")}>
                                 {lastCopied === "ipv6" ? "Copied!" : "Copy"}
@@ -318,26 +318,26 @@ ${values
                         )}
                     </div>
 
-                    <span>ISP / Org</span><div className="val">{info.isp || info.org || "—"}</div>
-                    <span>ASN</span><div className="val">{info.asn || "—"}</div>
-                    <span>Country</span><div className="val">{info.country || "—"}</div>
-                    <span>Region/State</span><div className="val">{info.region || "—"}</div>
-                    <span>City</span><div className="val">{info.city || "—"}</div>
-                    <span>Postal</span><div className="val">{info.postal || "—"}</div>
-                    <span>Latitude</span><div className="val">{info.latitude ?? "—"}</div>
-                    <span>Longitude</span><div className="val">{info.longitude ?? "—"}</div>
+                    <span>ISP / Org</span><div className="val">{info.isp || info.org || "-"}</div>
+                    <span>ASN</span><div className="val">{info.asn || "-"}</div>
+                    <span>Country</span><div className="val">{info.country || "-"}</div>
+                    <span>Region/State</span><div className="val">{info.region || "-"}</div>
+                    <span>City</span><div className="val">{info.city || "-"}</div>
+                    <span>Postal</span><div className="val">{info.postal || "-"}</div>
+                    <span>Latitude</span><div className="val">{info.latitude ?? "-"}</div>
+                    <span>Longitude</span><div className="val">{info.longitude ?? "-"}</div>
                     <span>Map</span>
                     <div className="val">
                         {mapHref ? (
                             <a href={mapHref} target="_blank" rel="noreferrer">Open on Map</a>
                         ) : (
-                            "—"
+                            "-"
                         )}
                     </div>
-                    <span>Timezone</span><div className="val">{info.timezone || "—"}</div>
-                    <span>UTC Offset</span><div className="val">{info.utc_offset || "—"}</div>
-                    <span>Device (UA)</span><div className="val ua">{info.userAgent || "—"}</div>
-                    <span>Connection</span><div className="val">{info.connection || "—"}</div>
+                    <span>Timezone</span><div className="val">{info.timezone || "-"}</div>
+                    <span>UTC Offset</span><div className="val">{info.utc_offset || "-"}</div>
+                    <span>Device (UA)</span><div className="val ua">{info.userAgent || "-"}</div>
+                    <span>Connection</span><div className="val">{info.connection || "-"}</div>
                 </Styled.Grid>
 
                 <Styled.FootNote>

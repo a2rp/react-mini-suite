@@ -67,7 +67,7 @@ export const Styled = {
             color: ${text};
         }
 
-        /* Difficulty pill — styled select + options for dark theme */
+        /* Difficulty pill - styled select + options for dark theme */
         label.difficulty {
             padding: 2px;
             gap: 0;

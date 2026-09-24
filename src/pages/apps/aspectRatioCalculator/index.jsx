@@ -434,7 +434,7 @@ const AspectRatioCalculator = () => {
                                 {state.grid && <div className="grid" aria-hidden />}
                             </Styled.PreviewBox>
                         </Styled.PreviewWrap>
-                        <p className="muted">Aspect: <strong>{ratio.w}:{ratio.h}</strong> — CSS: <code>aspect-ratio: {ratio.w} / {ratio.h}</code></p>
+                        <p className="muted">Aspect: <strong>{ratio.w}:{ratio.h}</strong> - CSS: <code>aspect-ratio: {ratio.w} / {ratio.h}</code></p>
                         <canvas ref={canvasRef} width="0" height="0" style={{ display: "none" }} />
                     </Styled.Card>
 
@@ -446,7 +446,7 @@ const AspectRatioCalculator = () => {
                                 <li key={it.id}>
                                     <div className="meta">
                                         <strong>{it.name}</strong>
-                                        <span>{it.ratioW}:{it.ratioH} — {it.width}×{it.height}</span>
+                                        <span>{it.ratioW}:{it.ratioH} - {it.width}×{it.height}</span>
                                     </div>
                                     <div className="row-actions">
                                         <button

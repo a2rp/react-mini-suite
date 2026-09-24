@@ -203,7 +203,7 @@ const TenziesGame = () => {
                                     key={d.id}
                                     aria-pressed={d.held}
                                     data-held={d.held ? "1" : "0"}
-                                    title={d.held ? "Held — click to release" : "Click to hold"}
+                                    title={d.held ? "Held - click to release" : "Click to hold"}
                                     onClick={() => toggleHold(d.id)}
                                 >
                                     <div className={`pips value-${d.value}`} aria-label={`Die ${i + 1} shows ${d.value}`}>
@@ -243,11 +243,11 @@ const TenziesGame = () => {
                         <Styled.Stats>
                             <div>
                                 <span className="label">Best Time </span>
-                                <strong>{stats.bestTime == null ? "—" : formatTime(stats.bestTime)}</strong>
+                                <strong>{stats.bestTime == null ? "-" : formatTime(stats.bestTime)}</strong>
                             </div>
                             <div>
                                 <span className="label">Best Rolls </span>
-                                <strong>{stats.bestRolls == null ? "—" : stats.bestRolls}</strong>
+                                <strong>{stats.bestRolls == null ? "-" : stats.bestRolls}</strong>
                             </div>
                             <div>
                                 <span className="label">Total Wins </span>

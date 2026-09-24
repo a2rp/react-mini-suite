@@ -133,7 +133,7 @@ const QuoteGenerator = () => {
 
     const copyCurrent = async () => {
         if (!current?.text) return;
-        const text = current.author ? `${current.text} — ${current.author}` : current.text;
+        const text = current.author ? `${current.text} - ${current.author}` : current.text;
         try {
             await navigator.clipboard.writeText(text);
             toast?.info?.("Copied to clipboard");
@@ -151,7 +151,7 @@ const QuoteGenerator = () => {
 
     const shareCurrent = async () => {
         if (!current?.text) return;
-        const text = current.author ? `${current.text} — ${current.author}` : current.text;
+        const text = current.author ? `${current.text} - ${current.author}` : current.text;
         const shareData = { text, title: "Quote" };
         if (navigator.share) {
             try { await navigator.share(shareData); } catch { }
@@ -303,7 +303,7 @@ const QuoteGenerator = () => {
                             {current?.text || "…"}
                         </blockquote>
                         <div className="meta">
-                            <span className="author">{current?.author || "—"}</span>
+                            <span className="author">{current?.author || "-"}</span>
                             <span className="source">{current?.source ? `src: ${current.source}` : ""}</span>
                         </div>
                     </Styled.QuoteBlock>
@@ -316,7 +316,7 @@ const QuoteGenerator = () => {
 
                     <Styled.FootNote>
                         <span className="muted">
-                            Last fetched: {current?.fetchedAt ? timeLabel(new Date(current.fetchedAt)) : "—"}
+                            Last fetched: {current?.fetchedAt ? timeLabel(new Date(current.fetchedAt)) : "-"}
                         </span>
                     </Styled.FootNote>
                 </Styled.Card>
@@ -356,7 +356,7 @@ const QuoteGenerator = () => {
                                     <div className="content">
                                         <p className="text">“{q.text}”</p>
                                         <p className="meta">
-                                            <span className="author">— {q.author || "Unknown"}</span>
+                                            <span className="author">- {q.author || "Unknown"}</span>
                                             {q.source ? <span className="source"> · {q.source}</span> : null}
                                         </p>
                                     </div>

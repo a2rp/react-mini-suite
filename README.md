@@ -1,66 +1,50 @@
 # React Mini Suite
 
-A compact hub of my **freelancing mini-apps** now opened up as **open source** - built for real clients (schools, students, tuitions, gyms, institutes, small orgs, developers).  
-Stack: **HTML + SCSS + JavaScript** inside each app, **React (Vite)** shell.
+A broad frontend collection of practical tools, games and small client-side applications built with React and Vite. The shared shell provides lazy routes, independent navigation scrolling and a responsive menu for exploring each app.
 
-## About this hub & background
+![React Mini Suite preview](screenshot.png)
 
-Over a long career in **freelancing**, I've built dozens of small, purpose-built tools for real clients.  
-Now I'm **open-sourcing** many of those **apps and app parts** so others can learn, reuse, and adapt.
+## Features
 
-**Live:** https://a2rp.github.io/react-mini-suite/  
-**Code:** https://github.com/a2rp/react-mini-suite
+- Large collection of focused utilities, games, generators and planners
+- Lazy-loaded routes with searchable navigation
+- Responsive fixed header, independently scrolling menu and floating go-top control
+- Local browser state where each app needs it
+- GitHub Pages SPA deployment support
 
----
+## Tech stack
 
-## Quick start
+React, React Router, Vite, styled-components, Material UI, react-icons and selected client-side utilities.
+
+## Run locally
 
 ```bash
-# Clone
-git clone https://github.com/a2rp/react-mini-suite.git
-cd react-mini-suite
-
-# Install & run
-npm i
-npm run dev   # open the local URL
-
-# Build (for GitHub Pages)
-npm run build
-npx shx cp dist/index.html dist/404.html   # SPA refresh fix (uses npx)
-npm run deploy   # publishes to gh-pages
+npm install
+npm run dev
 ```
 
-## Links
+Build and deploy:
 
-- Portfolio: [https://www.ashishranjan.net](https://www.ashishranjan.net)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
+```bash
+npm run lint
+npm run build
+npm run deploy
+```
 
-## Support
-
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me A Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://patreon.com/a2rp](https://patreon.com/a2rp)
-<!-- Project links -->
+Live: https://a2rp.github.io/react-mini-suite/
 
 ## Links
 
-- Live: [https://a2rp.github.io/react-mini-suite/](https://a2rp.github.io/react-mini-suite/)
-- Repository: [https://github.com/a2rp/react-mini-suite](https://github.com/a2rp/react-mini-suite)
-- Portfolio: [https://www.ashishranjan.net/](https://www.ashishranjan.net/)
-- GitHub: [https://github.com/a2rp](https://github.com/a2rp)
-- CodePen: [https://codepen.io/ash1198](https://codepen.io/ash1198)
-- LinkedIn: [https://www.linkedin.com/in/aashishranjan](https://www.linkedin.com/in/aashishranjan)
-- Facebook: [https://www.facebook.com/theash.ashish/](https://www.facebook.com/theash.ashish/)
-- YouTube: [https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1](https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1)
-- Email: [ash.ranjan09@gmail.com](mailto:ash.ranjan09@gmail.com)
+- Portfolio: https://www.ashishranjan.net/
+- GitHub: https://github.com/a2rp
+- CodePen: https://codepen.io/ash1198
+- LinkedIn: https://www.linkedin.com/in/aashishranjan
+- Facebook: https://www.facebook.com/theash.ashish/
+- YouTube: https://www.youtube.com/@ashishranjan-ashz?sub_confirmation=1
+- Email: mailto:ash.ranjan09@gmail.com
 
 ## Support
 
-- Support: [https://a2rp-donation-page.netlify.app/](https://a2rp-donation-page.netlify.app/)
-- Buy Me a Coffee: [https://buymeacoffee.com/a2rp](https://buymeacoffee.com/a2rp)
-- Patreon: [https://www.patreon.com/a2rp](https://www.patreon.com/a2rp)
+- Support: https://a2rp-donation-page.netlify.app/
+- Buy Me a Coffee: https://buymeacoffee.com/a2rp
+- Patreon: https://patreon.com/a2rp

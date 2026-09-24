@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Styled } from "./styled";
 
 /**
- * BMI Calculator — independent unit controls via <select> (no radio flip issues)
+ * BMI Calculator - independent unit controls via <select> (no radio flip issues)
  * - Height units: cm OR ft/in
  * - Weight units: kg OR lb
  * - Auto-converts existing values when switching units
@@ -80,7 +80,7 @@ const BmiCalculator = () => {
 
     // WHO categories
     const categoryFor = (bmi) => {
-        if (!bmi || Number.isNaN(bmi) || !Number.isFinite(bmi)) return { label: "—", tone: "muted" };
+        if (!bmi || Number.isNaN(bmi) || !Number.isFinite(bmi)) return { label: "-", tone: "muted" };
         if (bmi < 18.5) return { label: "Underweight", tone: "warn" };
         if (bmi < 25) return { label: "Normal", tone: "good" };
         if (bmi < 30) return { label: "Overweight", tone: "warn" };
@@ -249,7 +249,7 @@ const BmiCalculator = () => {
                 <div className="resultTop">
                     <div>
                         <div className="muted">Your BMI</div>
-                        <div className="bmiValue">{bmi ? bmi.toFixed(1) : "—"}</div>
+                        <div className="bmiValue">{bmi ? bmi.toFixed(1) : "-"}</div>
                     </div>
                     <Styled.Badge $tone={cat.tone}>{cat.label}</Styled.Badge>
                 </div>
@@ -259,8 +259,8 @@ const BmiCalculator = () => {
                     <p>
                         For your height, a healthy weight is{" "}
                         <strong>
-                            {healthyMinDisp ? healthyMinDisp.toFixed(1) : "—"} –{" "}
-                            {healthyMaxDisp ? healthyMaxDisp.toFixed(1) : "—"} {rangeUnitLabel}
+                            {healthyMinDisp ? healthyMinDisp.toFixed(1) : "-"} –{" "}
+                            {healthyMaxDisp ? healthyMaxDisp.toFixed(1) : "-"} {rangeUnitLabel}
                         </strong>.
                     </p>
                     <p className="fine">

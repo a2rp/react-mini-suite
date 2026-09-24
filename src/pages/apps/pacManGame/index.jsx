@@ -154,7 +154,7 @@ const PacManGame = () => {
         }
     }, [grid]);
 
-    // Ghost AI (random, anti-backtrack)
+    // Ghost computer (random, anti-backtrack)
     const chooseGhostDir = useCallback((ghost) => {
         const options = DIR_ORDER.slice();
         for (let i = options.length - 1; i > 0; i--) {
@@ -331,7 +331,7 @@ const PacManGame = () => {
                 <Styled.TopBar>
                     <div className="left">
                         <h1>PacMan Game</h1>
-                        <p className="subtitle">Nostalgic mini-game in React — pellets, power-ups, and pesky ghosts.</p>
+                        <p className="subtitle">Nostalgic mini-game in React - pellets, power-ups, and pesky ghosts.</p>
                     </div>
                     <div className="right">
                         <div className="stat"><span className="label">Score</span><span className="value">{score}</span></div>

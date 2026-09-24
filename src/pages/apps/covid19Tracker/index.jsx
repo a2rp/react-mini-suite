@@ -177,8 +177,8 @@ const Covid19Tracker = () => {
                     If Refresh doesn't change values, the source hasn't updated yet.
                 </p>
                 <ul>
-                    <li><b>Daily estimate:</b> {nextDaily ? `${formatPretty(nextDaily)} — ${approxFromNow(nextDaily)}` : "-"}</li>
-                    <li><b>Weekly fallback:</b> {nextWeekly ? `${formatPretty(nextWeekly)} — ${approxFromNow(nextWeekly)}` : "-"}</li>
+                    <li><b>Daily estimate:</b> {nextDaily ? `${formatPretty(nextDaily)} - ${approxFromNow(nextDaily)}` : "-"}</li>
+                    <li><b>Weekly fallback:</b> {nextWeekly ? `${formatPretty(nextWeekly)} - ${approxFromNow(nextWeekly)}` : "-"}</li>
                 </ul>
             </aside>
         </Styled.Wrapper>

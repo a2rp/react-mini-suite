@@ -254,13 +254,13 @@ export default function MythWeaver() {
                         <div className="seed">
                             <h4>Strands</h4>
                             <ul>
-                                <li><b>Hero:</b> {seed.hero || "—"}</li>
-                                <li><b>Companion:</b> {seed.companion || "—"}</li>
-                                <li><b>Place:</b> {seed.place || "—"}</li>
-                                <li><b>Quest:</b> {seed.quest || "—"}</li>
-                                <li><b>Antagonist:</b> {seed.foe || "—"}</li>
-                                <li><b>Artifact:</b> {seed.artifact || "—"}</li>
-                                <li><b>Theme:</b> {seed.theme || "—"}</li>
+                                <li><b>Hero:</b> {seed.hero || "-"}</li>
+                                <li><b>Companion:</b> {seed.companion || "-"}</li>
+                                <li><b>Place:</b> {seed.place || "-"}</li>
+                                <li><b>Quest:</b> {seed.quest || "-"}</li>
+                                <li><b>Antagonist:</b> {seed.foe || "-"}</li>
+                                <li><b>Artifact:</b> {seed.artifact || "-"}</li>
+                                <li><b>Theme:</b> {seed.theme || "-"}</li>
                             </ul>
                         </div>
                     </Styled.StoryCard>

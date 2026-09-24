@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Styled } from "./styled";
 
 /**
- * SealMaker — Digital rubber stamp generator
+ * SealMaker - Digital rubber stamp generator
  * Fix: proper top/bottom arc placement (left→right, upright glyphs, non-crossing spacing)
  * Adds: Ring offset + tracking sliders (as before)
  */
@@ -133,7 +133,7 @@ export default function SealMaker() {
     return (
         <Styled.Wrapper>
             <Styled.HeaderBar>
-                <h1>SealMaker — Digital Stamp Generator</h1>
+                <h1>SealMaker - Digital Stamp Generator</h1>
                 <span className="muted">Accurate arc text • Offline-first • LocalStorage only</span>
             </Styled.HeaderBar>
 

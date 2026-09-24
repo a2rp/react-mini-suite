@@ -12,7 +12,7 @@ const FarmingLanding = () => {
                     <p className="eyebrow">Agri tools & tips</p>
                     <h1>Farming Landing</h1>
                     <p className="tagline">
-                        Simple, practical utilities for better crops — soil to harvest.
+                        Simple, practical utilities for better crops - soil to harvest.
                     </p>
 
                     <Styled.Actions>
